@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundkalku"
+    tools:context=".Kalkulator2"
+    android:padding="10dp">
+
+    <!-- Display -->
+
+    <!-- Row 1 -->
+    <EditText
+        android:id="@+id/etDisplay"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="6dp"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="0"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btbersihkan"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="C"
+        android:textSize="27sp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintTop_toBottomOf="@id/etDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btpangkat" />
+
+    <Button
+        android:id="@+id/btpangkat"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="^"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/etDisplay"
+        app:layout_constraintStart_toEndOf="@id/btbersihkan"
+        app:layout_constraintEnd_toStartOf="@id/btnegatif" />
+
+    <Button
+        android:id="@+id/btnegatif"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="-/+"
+        android:textSize="21sp"
+        app:layout_constraintTop_toBottomOf="@id/etDisplay"
+        app:layout_constraintStart_toEndOf="@id/btpangkat"
+        app:layout_constraintEnd_toStartOf="@id/btbagi" />
+
+    <Button
+        android:id="@+id/btbagi"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="/"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/etDisplay"
+        app:layout_constraintStart_toEndOf="@id/btnegatif"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 2 -->
+    <Button
+        android:id="@+id/btangka7"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="7"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btbersihkan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btangka8" />
+
+    <Button
+        android:id="@+id/btangka8"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="8"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btpangkat"
+        app:layout_constraintStart_toEndOf="@id/btangka7"
+        app:layout_constraintEnd_toStartOf="@id/btangka9" />
+
+    <Button
+        android:id="@+id/btangka9"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="9"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btnegatif"
+        app:layout_constraintStart_toEndOf="@id/btangka8"
+        app:layout_constraintEnd_toStartOf="@id/btkali" />
+
+    <Button
+        android:id="@+id/btkali"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="x"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btbagi"
+        app:layout_constraintStart_toEndOf="@id/btangka9"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 3 -->
+    <Button
+        android:id="@+id/btangka4"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="4"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btangka5" />
+
+    <Button
+        android:id="@+id/btangka5"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="5"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka8"
+        app:layout_constraintStart_toEndOf="@id/btangka4"
+        app:layout_constraintEnd_toStartOf="@id/btangka6" />
+
+    <Button
+        android:id="@+id/btangka6"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="6"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka9"
+        app:layout_constraintStart_toEndOf="@id/btangka5"
+        app:layout_constraintEnd_toStartOf="@id/btkurang" />
+
+    <Button
+        android:id="@+id/btkurang"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="-"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btkali"
+        app:layout_constraintStart_toEndOf="@id/btangka6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 4 -->
+    <Button
+        android:id="@+id/btangka1"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="1"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btangka2" />
+
+    <Button
+        android:id="@+id/btangka2"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="2"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka5"
+        app:layout_constraintStart_toEndOf="@id/btangka1"
+        app:layout_constraintEnd_toStartOf="@id/btangka3" />
+
+    <Button
+        android:id="@+id/btangka3"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="3"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka6"
+        app:layout_constraintStart_toEndOf="@id/btangka2"
+        app:layout_constraintEnd_toStartOf="@id/bttambah" />
+
+    <Button
+        android:id="@+id/bttambah"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="+"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btkurang"
+        app:layout_constraintStart_toEndOf="@id/btangka3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 5 -->
+    <Button
+        android:id="@+id/btpersen"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="%"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btangka0" />
+
+    <Button
+        android:id="@+id/btangka0"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="0"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka1"
+        app:layout_constraintStart_toEndOf="@id/btpersen"
+        app:layout_constraintEnd_toStartOf="@id/btkoma" />
+
+    <Button
+        android:id="@+id/btkoma"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text=","
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/btangka1"
+        app:layout_constraintStart_toEndOf="@id/btangka0"
+        app:layout_constraintEnd_toStartOf="@id/btsama" />
+
+    <Button
+        android:id="@+id/btsama"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#544848"
+        android:text="="
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/bttambah"
+        app:layout_constraintStart_toEndOf="@id/btkoma"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/konversi">
+
+    <!-- Guideline to split screen into 50/50 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="405dp" />
+
+    <!-- Left side for input and conversion -->
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Konversi Suhu"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSuhuAwal"
+        android:layout_width="0dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Masukkan Suhu Awal"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJudul" />
+
+    <EditText
+        android:id="@+id/etSuhuAwal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="0"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@color/black"
+        android:textColor="#000000"
+        android:inputType="numberDecimal|number|numberSigned"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textAlignment="textEnd"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toStartOf="@id/spSuhuAwal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSuhuAwal" />
+
+    <Spinner
+        android:id="@+id/spSuhuAwal"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:entries="@array/suhu"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toEndOf="@id/etSuhuAwal"
+        app:layout_constraintTop_toBottomOf="@id/tvSuhuAwal" />
+
+    <TextView
+        android:id="@+id/tvKonversikanKe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Konversikan Ke"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        app:layout_constraintEnd_toStartOf="@id/spSuhuAkhir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSuhuAwal" />
+
+    <!-- Right side for result and reset -->
+
+    <Spinner
+        android:id="@+id/spSuhuAkhir"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="5dp"
+        android:entries="@array/suhu"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spSuhuAwal"
+        app:layout_constraintTop_toBottomOf="@+id/tvSuhuAkhir" />
+
+    <Button
+        android:id="@+id/btKonversi"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#1591EA"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Konversikan"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvKonversikanKe" />
+
+    <TextView
+        android:id="@+id/tvSuhuAkhir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Suhu Akhir"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHasilSuhuAkhir"
+        android:layout_width="295dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppinsregular"
+        android:text="-"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textSize="72sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tvSuhuAkhir" />
+
+    <Button
+        android:id="@+id/btBersihkan"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#8359A3"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Bersihkan"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tvHasilSuhuAkhir" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

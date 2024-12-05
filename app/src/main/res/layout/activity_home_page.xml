@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".HomePage"
+    android:background="@drawable/backgroundkalku">
+
+    <!-- Dashboard Title -->
+    <TextView
+        android:id="@+id/tvjudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="9dp"
+        />
+
+    <TextView
+        android:id="@+id/tvsalam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Pagi, Narendra!\nRabu, 4 Desember 2024"
+        android:textSize="14sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:fontFamily="@font/poppinsbold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvjudul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Materi Yang Saya Pelajari Title -->
+    <TextView
+        android:id="@+id/textMateriTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Materi Yang Saya Pelajari"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvsalam"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="9dp"/>
+
+    <!-- Guideline for Layout Splitting -->
+    <HorizontalScrollView
+        android:id="@+id/hsv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textMateriTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Dasar Pemrograman Mobile CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDasarPemrograman"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#6C63FF"
+                android:padding="16dp"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:padding="20dp"
+                    android:text="Dasar Pemrograman Mobile"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- View dan ViewGroup CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvKodeKotlin"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#6C63FF"
+                android:padding="16dp"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:padding="20dp"
+                    android:text="View dan ViewGroup"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Desain Layout CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDesainLayout"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="#6C63FF"
+                android:padding="16dp"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:layout_width="187dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppinsbold"
+                    android:padding="21dp"
+                    android:text="Desain Layout"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvViewGroup"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#6C63FF"
+                android:padding="16dp"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:padding="20dp"
+                    android:text="Kode Kotlin"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Guideline for Layout Splitting -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvform"
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="2dp"
+        app:cardBackgroundColor="#005B96"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/igform"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:src="@drawable/icon_form" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvform"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Desain Formulir"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvcalculator"
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="2dp"
+        app:cardBackgroundColor="#005B96"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvform">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvcardcalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Kalkulator"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/igcalculator"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/icon_kalkulator" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvkonversi"
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        app:cardBackgroundColor="#005B96"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvcalculator">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/igkonversi"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/baseline_thermostat_24" />
+
+        <TextView
+            android:id="@+id/tvkonversi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Konversi"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvprofile"
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="2dp"
+        app:cardBackgroundColor="#005B96"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvkonversi">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/igprofile"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/icon_profile" />
+
+        <TextView
+            android:id="@+id/tvprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Desain Halaman Profile"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

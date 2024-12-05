@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Belajar_mobilElnoah</string>
+    <string-array name="operasiaritmatika">
+        <item>Tambah</item>
+        <item>Kurang</item>
+        <item>Kali</item>
+        <item>Bagi</item>
+    </string-array>
+    <string-array name="pilihanesktra">
+        <item>PASKI VISKA</item>
+        <item>PASPRAMSUS KOPRAMSEGA</item>
+        <item>PALANG MERAH REMAJA VIVOHASKA</item>
+        <item>KIR REDAKSI</item>
+        <item>ROHKRIS VISKA</item>
+        <item>ROHKAT VISKA ST. BERTILLA</item>
+        <item>ROHIS ARVISKA</item>
+        <item>FUTSAL</item>
+        <item>VIBAS VISKA BASKET</item>
+        <item>VOLLY</item>
+        <item>NAVISKA</item>
+        <item>ENGLISH LOVER VISKA(ELVISKA)</item>
+    </string-array>
+    <string-array name="suhu">
+        <item>Celcius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+</resources>

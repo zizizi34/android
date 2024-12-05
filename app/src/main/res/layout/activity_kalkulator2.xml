@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundkalku"
+    tools:context=".Kalkulator2">
+
+    <EditText
+        android:id="@+id/etDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="40dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="0"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@id/btbersihkan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btbersihkan"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:text="C"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="27sp"
+        android:textColor="#FACB77"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDisplay" />
+
+    <Button
+        android:id="@+id/btpangkat"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="^"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btbersihkan"
+        app:layout_constraintTop_toBottomOf="@id/etDisplay" />
+
+    <Button
+        android:id="@+id/btnegatif"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="-/+"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btpangkat"
+        app:layout_constraintTop_toBottomOf="@id/etDisplay" />
+
+    <Button
+        android:id="@+id/btbagi"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppinsregular"
+        android:text="/"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka9"
+        app:layout_constraintTop_toBottomOf="@id/btnegatif" />
+
+    <Button
+        android:id="@+id/btangka7"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="7"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btbersihkan" />
+
+    <Button
+        android:id="@+id/btangka8"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="8"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka7"
+        app:layout_constraintTop_toBottomOf="@id/btpangkat" />
+
+    <Button
+        android:id="@+id/btangka9"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="9"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka8"
+        app:layout_constraintTop_toBottomOf="@id/btnegatif" />
+
+    <Button
+        android:id="@+id/btkali"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="x"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btangka9"
+        app:layout_constraintTop_toBottomOf="@id/btbagi" />
+
+    <Button
+        android:id="@+id/btangka4"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="4"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btangka7" />
+
+    <Button
+        android:id="@+id/btangka5"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="5"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka4"
+        app:layout_constraintTop_toBottomOf="@id/btangka8" />
+
+    <Button
+        android:id="@+id/btangka6"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="6"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka5"
+        app:layout_constraintTop_toBottomOf="@id/btangka9" />
+
+    <Button
+        android:id="@+id/btkurang"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="-"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btangka6"
+        app:layout_constraintTop_toBottomOf="@id/btkali" />
+
+    <Button
+        android:id="@+id/btangka1"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="1"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btangka4" />
+
+    <Button
+        android:id="@+id/btangka2"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="2"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka1"
+        app:layout_constraintTop_toBottomOf="@id/btangka5" />
+
+    <Button
+        android:id="@+id/btangka3"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="3"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka2"
+        app:layout_constraintTop_toBottomOf="@id/btangka6" />
+
+    <Button
+        android:id="@+id/bttambah"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="+"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btangka3"
+        app:layout_constraintTop_toBottomOf="@id/btkurang" />
+
+    <Button
+        android:id="@+id/btpersen"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="%"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btangka1" />
+
+    <Button
+        android:id="@+id/btangka0"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="0"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btpersen"
+        app:layout_constraintTop_toBottomOf="@id/btangka2" />
+
+    <Button
+        android:id="@+id/btkoma"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text=","
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btangka0"
+        app:layout_constraintTop_toBottomOf="@id/btangka3" />
+
+    <Button
+        android:id="@+id/btsama"
+        android:layout_width="390dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="-290dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="@color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btkoma"
+        app:layout_constraintTop_toBottomOf="@id/bttambah" />
+</androidx.constraintlayout.widget.ConstraintLayout>
