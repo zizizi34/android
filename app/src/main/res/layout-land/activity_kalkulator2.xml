@@ -35,6 +35,7 @@
         android:backgroundTint="#544848"
         android:text="C"
         android:textSize="27sp"
+        android:textColor="#FACB77"
         android:fontFamily="@font/poppinsbold"
         app:layout_constraintTop_toBottomOf="@id/etDisplay"
         app:layout_constraintStart_toStartOf="parent"
